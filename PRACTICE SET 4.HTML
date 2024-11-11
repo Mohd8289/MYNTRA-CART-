@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myntra bag exercise</title>
+
+    <style>
+        h1 {
+            width: 250PX;
+            background-color: lightyellow;
+            align-items: center;
+            display: block;
+            margin: 40px auto;
+        }
+
+        .btn {
+            background-color: lightgreen;
+            border: 4px solid black;
+            border-radius: 7px;
+            margin: 7px;
+            padding: 4px;
+        }
+
+        #a2 {
+            background-color: white;
+            padding-left: 17px;
+            border-radius: 10px;
+            align-items: center;
+        }
+       
+
+
+    </style>
+</head>
+
+<body>
+<center>
+    <h1>MYNTRA CART </h1>
+
+    <button class="btn" id="a1" onclick="cart_quantity = cart_quantity + 1;
+    
+    document.querySelector('#cartitem').innerText= `YOUR BAG HAS  ${ cart_quantity}   ITEMS` ;
+    
+    ">ADD TO CART</button>
+
+
+    <button class="btn" id="a2" onclick="cart_quantity = cart_quantity - 1;
+
+    document.querySelector('#cartitem').innerText =`YOUR BAG HAS ${cart_quantity} ITEMS`;
+
+    ">MOVE TO WISHLIST</button>
+
+
+    <button class="btn" id="a3" onclick="cart_quantity = cart_quantity + 2;
+
+    document.querySelector('#cartitem').innerText =`YOUR BAG HAS ${cart_quantity} ITEMS`;">ADD 1+1 item</button>
+
+    <h1 id="cartitem">YOUR BAG HAS 0 ITEMS</h1>
+</center>
+
+    <script>
+
+        let cart_quantity = 0;
+
+        // document.querySelector('#cartitem').innerText= 'YOUR BAG HAS '  + cart_quantity +  ' ITEMS';
+
+
+        document.querySelector('#cartitem').innerText = `YOUR BAG HAS  ${cart_quantity}   ITEMS`;
+    </script>
+</body>
+
+</html>
